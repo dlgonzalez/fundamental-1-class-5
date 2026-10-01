@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental 1 | Class 5 – Agenda & Grammar</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        h1, h2, h3, h4, h5, .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-nunito { font-family: 'Nunito', sans-serif; }
+        
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
+        
+        .correct-highlight { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #166534 !important;}
+        .wrong-highlight { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important;}
+        
+        .toast { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; border-radius: 8px; color: white; font-weight: bold; opacity: 0; transition: opacity 0.3s, transform 0.3s; transform: translateY(20px); pointer-events: none; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast-success { background-color: #10b981; }
+        .toast-error { background-color: #ef4444; }
+
+        .transition-box { background: linear-gradient(135deg, #eef2ff, #e0e7ff); border-left: 4px solid #6366f1; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+        .transition-box h4 { color: #3730a3; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .transition-box p { color: #334155; font-size: 0.9rem; line-height: 1.6; }
+        
+        .instruction-box { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; }
+        .instruction-box h4 { color: #9a3412; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .instruction-box ol, .instruction-box ul { color: #334155; font-size: 0.88rem; line-height: 1.7; padding-left: 20px; list-style-type: decimal;}
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .droppable { min-height: 40px; border: 2px dashed #cbd5e1; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; background: #f8fafc; transition: all 0.2s; padding: 0.5rem;}
+        
+        @media print {
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-slate-900 text-white shadow-2xl relative overflow-hidden border-b-4 border-indigo-500 no-print">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-y-1/3 -translate-x-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-8 relative z-10">
+            <div class="mb-6">
+                <img src="https://www.colomboamericano.edu.co/wp-content/uploads/2024/06/Logo-Colombo-Horizontal.png" alt="Colombo Americano Logo" class="h-10 md:h-12 bg-white/95 p-2 rounded-lg shadow-sm">
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="flex items-center gap-5">
+                    <div class="h-16 w-16 md:h-20 md:w-20 bg-white rounded-2xl p-2 shadow-lg flex items-center justify-center text-4xl">
+                        🚀
+                    </div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 flex items-center font-poppins">
+                            Fundamental 1
+                        </h1>
+                        <p class="text-slate-300 text-sm md:text-base font-medium tracking-wide uppercase">Class 5 <span class="text-indigo-400 mx-2">•</span> Agenda & Grammar Mastery</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 p-5 rounded-2xl backdrop-blur-md border border-white/10 shadow-xl max-w-md w-full md:w-auto">
+                    <h2 class="text-xl font-bold text-emerald-300 mb-3 border-b border-white/20 pb-2">🎯 Today's Mission</h2>
+                    <ul class="text-sm text-slate-100 space-y-2">
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-2"></i> <strong>Review</strong> dates, times, and prices in a weekly agenda.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-2"></i> <strong>Master</strong> articles and plural nouns in context.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-2"></i> <strong>Apply</strong> the Verb 'To Be' in complex dialogues and stories.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check-circle text-emerald-400 mt-1 mr-2"></i> <strong>Write</strong> a complete "About Me" paragraph using the verb to be.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200 no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex space-x-2 overflow-x-auto py-3 no-scrollbar" id="tab-container">
+                <button onclick="switchTab('tab-agenda')" id="btn-tab-agenda" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-slate-800 text-white shadow-md whitespace-nowrap">
+                    1. 📅 The Agenda
+                </button>
+                <button onclick="switchTab('tab-nouns')" id="btn-tab-nouns" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    2. 📝 Nouns & Articles
+                </button>
+                <button onclick="switchTab('tab-tobe')" id="btn-tab-tobe" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    3. 🅰 Verb To Be Mastery
+                </button>
+                <button onclick="switchTab('tab-mission')" id="btn-tab-mission" class="px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap">
+                    4. ✍️ Writing Workshop
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: AGENDA (WARM UP)                    -->
+        <!-- ========================================== -->
+        <section id="tab-agenda" class="tab-content active no-print">
+            <!-- Fun Warm-up Game -->
+            <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative overflow-hidden mb-10 text-center text-white">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#3b82f6 2px, transparent 2px); background-size: 30px 30px;"></div>
+                <div id="date-trivia-container" class="relative z-10 max-w-3xl mx-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Warm-Up Game</span>
+                        <span id="date-trivia-progress" class="text-blue-300 font-bold text-sm">Question 1 / 5</span>
+                    </div>
+                    <div class="bg-slate-800 border-2 border-blue-500 rounded-2xl p-8 min-h-[160px] flex items-center justify-center text-center shadow-inner mb-8">
+                        <p id="date-trivia-question" class="text-2xl md:text-3xl font-medium font-poppins text-white leading-snug">
+                            Ready to review Dates & Prices? Click Start!
+                        </p>
+                    </div>
+                    <div id="date-trivia-options" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button onclick="startDateTrivia()" class="md:col-span-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xl px-12 py-4 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] transform hover:scale-105 transition-all">
+                            START GAME 🚀
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transition-box border-l-blue-500 bg-blue-50">
+                <h4 class="text-blue-800"><i class="fa-solid fa-calendar-week"></i> The Weekly Agenda</h4>
+                <p>Let's push our English to the next level! Read this manager's weekly planner. Pay close attention to the days, dates, times, and prices.</p>
+            </div>
+
+            <!-- Reading: The Agenda -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 mb-8 overflow-hidden">
+                <div class="bg-slate-800 text-white p-4 flex justify-between items-center">
+                    <h3 class="font-bold text-lg font-poppins"><i class="fa-solid fa-book"></i> Manager's Schedule - October</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                    
+                    <!-- Monday -->
+                    <div class="p-6 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex justify-between items-start mb-4 border-b border-slate-200 pb-2">
+                            <div>
+                                <h4 class="font-black text-xl text-blue-600 uppercase tracking-wide">Monday</h4>
+                                <p class="text-sm font-bold text-slate-500">October 12th</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">09:00</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Team Meeting</p>
+                                    <p class="text-xs text-slate-500">Office Room B</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">13:00</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Lunch with Client</p>
+                                    <p class="text-xs text-slate-500 text-emerald-600 font-bold">Cost: $45</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="p-6 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex justify-between items-start mb-4 border-b border-slate-200 pb-2">
+                            <div>
+                                <h4 class="font-black text-xl text-blue-600 uppercase tracking-wide">Wednesday</h4>
+                                <p class="text-sm font-bold text-slate-500">October 14th</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">10:30</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Dentist Appointment</p>
+                                    <p class="text-xs text-slate-500 text-emerald-600 font-bold">Cost: $120</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">15:00</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Call with Mexico</p>
+                                    <p class="text-xs text-slate-500">Zoom Link</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="p-6 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex justify-between items-start mb-4 border-b border-slate-200 pb-2">
+                            <div>
+                                <h4 class="font-black text-xl text-blue-600 uppercase tracking-wide">Friday</h4>
+                                <p class="text-sm font-bold text-slate-500">October 16th</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">08:00</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Gym Class</p>
+                                    <p class="text-xs text-slate-500 text-emerald-600 font-bold">Cost: $15</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded shrink-0 w-16 text-center">20:00</span>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Dinner with Sarah</p>
+                                    <p class="text-xs text-slate-500">Italian Restaurant</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 1: Comprehension -->
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 1: Agenda Comprehension</h4>
+                <ol>
+                    <li>Read the agenda carefully.</li>
+                    <li>Answer the multiple-choice questions below.</li>
+                </ol>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10" id="agenda-mcq-container">
+                <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm" id="ag-mcq-1">
+                    <p class="font-medium text-slate-800 mb-3 text-sm">1. When is the team meeting?</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('ag-mcq-1', 0, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">A) On Wednesday at 9:00</button>
+                        <button onclick="checkMCQ('ag-mcq-1', 1, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">B) On Monday at 9:00</button>
+                        <button onclick="checkMCQ('ag-mcq-1', 2, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">C) On Monday at 13:00</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm" id="ag-mcq-2">
+                    <p class="font-medium text-slate-800 mb-3 text-sm">2. How much is the dentist appointment?</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('ag-mcq-2', 0, 0)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">A) It is $120.</button>
+                        <button onclick="checkMCQ('ag-mcq-2', 1, 0)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">B) It is $45.</button>
+                        <button onclick="checkMCQ('ag-mcq-2', 2, 0)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">C) It is $15.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm" id="ag-mcq-3">
+                    <p class="font-medium text-slate-800 mb-3 text-sm">3. What is the date on Friday?</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('ag-mcq-3', 0, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">A) October 12th</button>
+                        <button onclick="checkMCQ('ag-mcq-3', 1, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">B) October 14th</button>
+                        <button onclick="checkMCQ('ag-mcq-3', 2, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">C) October 16th</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm" id="ag-mcq-4">
+                    <p class="font-medium text-slate-800 mb-3 text-sm">4. Is the dinner with Sarah on Wednesday?</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('ag-mcq-4', 0, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">A) Yes, it is.</button>
+                        <button onclick="checkMCQ('ag-mcq-4', 1, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">B) No, it is on Friday.</button>
+                        <button onclick="checkMCQ('ag-mcq-4', 2, 1)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">C) No, it is on Monday.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm md:col-span-2" id="ag-mcq-5">
+                    <p class="font-medium text-slate-800 mb-3 text-sm">5. Which statement is TRUE?</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                        <button onclick="checkMCQ('ag-mcq-5', 0, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">A) Lunch with the client is $120.</button>
+                        <button onclick="checkMCQ('ag-mcq-5', 1, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">B) The gym class is at 20:00.</button>
+                        <button onclick="checkMCQ('ag-mcq-5', 2, 2)" class="text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 px-3 rounded text-sm transition">C) The Zoom call is on Wednesday.</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                 <button onclick="switchTab('tab-nouns')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Nouns & Articles 📝 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: NOUNS & ARTICLES                    -->
+        <!-- ========================================== -->
+        <section id="tab-nouns" class="tab-content no-print">
+            <div class="transition-box border-l-emerald-500 bg-emerald-50">
+                <h4 class="text-emerald-800"><i class="fa-solid fa-pen-nib"></i> Nouns & Articles (Deep Dive)</h4>
+                <p>A noun is a word that names a Person, Place, Thing, or Animal. Let's master how to say "one" thing (A/An) and how to say "many" things (Plurals) in real-world contexts.</p>
+            </div>
+
+            <!-- Grammar in Context -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8 overflow-x-auto">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Grammar in Context: Why do we use them?</h3>
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-emerald-50 border-b-2 border-emerald-200 text-emerald-800 text-sm uppercase tracking-wider">
+                            <th class="p-3 font-bold w-1/3">Function</th>
+                            <th class="p-3 font-bold">Example in Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-800 text-sm font-medium">
+                        <tr>
+                            <td class="p-3">1. Describing Professions</td>
+                            <td class="p-3">I am <strong class="text-emerald-600">a</strong> teacher. She is <strong class="text-emerald-600">an</strong> engineer.</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="p-3">2. Identifying Objects (Singular)</td>
+                            <td class="p-3">It is <strong class="text-emerald-600">an</strong> apple. I need <strong class="text-emerald-600">a</strong> phone.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">3. Describing Quantities (Plural)</td>
+                            <td class="p-3">I have three <strong class="text-indigo-600">cars</strong>. I see two <strong class="text-indigo-600">women</strong>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 bg-red-50 p-3 rounded-lg border-l-4 border-red-400 text-sm text-red-800">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i><strong>Common Mistake:</strong> Do NOT use A/An with plural nouns! 
+                    <br><span class="ml-6 block mt-1">❌ I see a cats. &nbsp;&nbsp; ✅ I see cats.</span>
+                </div>
+            </div>
+
+            <!-- Recap Boxes (A/An) -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Rule 1: A vs. An (Singular)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl font-black text-emerald-600">A</span>
+                            <span class="font-bold text-slate-700">Consonant Sound</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-2">Use "A" before a word that starts with a consonant sound.</p>
+                        <p class="font-medium text-slate-800 text-sm">Example: I am <strong class="text-emerald-600">a t</strong>eacher.</p>
+                    </div>
+                    <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl font-black text-indigo-600">An</span>
+                            <span class="font-bold text-slate-700">Vowel Sound</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-2">Use "An" before a word that starts with a vowel sound.</p>
+                        <p class="font-medium text-slate-800 text-sm">Example: I am <strong class="text-indigo-600">an e</strong>ngineer.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 2: Choose A or An -->
+                <div class="instruction-box">
+                    <h4><i class="fa-solid fa-list-ol"></i> Activity 2: Toggle the Article</h4>
+                    <ol>
+                        <li>Click the toggle button to select the correct article (A or An) for the 15 words below.</li>
+                    </ol>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-1" onclick="toggleArticle('btn-art-1')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Doctor</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-2" onclick="toggleArticle('btn-art-2')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Artist</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-3" onclick="toggleArticle('btn-art-3')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Teacher</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-4" onclick="toggleArticle('btn-art-4')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Apple</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-5" onclick="toggleArticle('btn-art-5')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Manager</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-6" onclick="toggleArticle('btn-art-6')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Accountant</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-7" onclick="toggleArticle('btn-art-7')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Student</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-8" onclick="toggleArticle('btn-art-8')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Engineer</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-9" onclick="toggleArticle('btn-art-9')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Book</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-10" onclick="toggleArticle('btn-art-10')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Orange</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-11" onclick="toggleArticle('btn-art-11')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Umbrella</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-12" onclick="toggleArticle('btn-art-12')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Car</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-13" onclick="toggleArticle('btn-art-13')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Idea</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-14" onclick="toggleArticle('btn-art-14')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Actor</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <button id="btn-art-15" onclick="toggleArticle('btn-art-15')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-black py-1 px-4 rounded transition w-full" data-val="a">A</button>
+                        <span class="font-bold text-slate-800 text-sm">Phone</span>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <button onclick="checkArticles()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check 15 Articles</button>
+                    <p id="art-feedback" class="mt-2 font-bold h-5 text-sm"></p>
+                </div>
+            </div>
+
+            <!-- Plurals -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Rule 2: Singular to Plural</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <p class="font-bold text-slate-800 text-sm mb-1">1. Most Nouns: + s</p>
+                        <p class="text-sm text-slate-600">Car ➔ Car<strong class="text-emerald-600">s</strong></p>
+                        <p class="text-sm text-slate-600">Dog ➔ Dog<strong class="text-emerald-600">s</strong></p>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <p class="font-bold text-slate-800 text-sm mb-1">2. Ends in s, sh, ch, x: + es</p>
+                        <p class="text-sm text-slate-600">Bus ➔ Bus<strong class="text-emerald-600">es</strong></p>
+                        <p class="text-sm text-slate-600">Watch ➔ Watch<strong class="text-emerald-600">es</strong></p>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <p class="font-bold text-slate-800 text-sm mb-1">3. Consonant + y: -ies</p>
+                        <p class="text-sm text-slate-600">City ➔ Cit<strong class="text-emerald-600">ies</strong></p>
+                        <p class="text-sm text-slate-600">Baby ➔ Bab<strong class="text-emerald-600">ies</strong></p>
+                    </div>
+                    <div class="bg-rose-50 p-3 rounded-lg border border-rose-200">
+                        <p class="font-bold text-rose-800 text-sm mb-1">4. Irregulars ⚠️</p>
+                        <p class="text-sm text-slate-600">Man ➔ M<strong class="text-rose-600">e</strong>n</p>
+                        <p class="text-sm text-slate-600">Child ➔ Child<strong class="text-rose-600">ren</strong></p>
+                        <p class="text-sm text-slate-600">Person ➔ P<strong class="text-rose-600">eople</strong></p>
+                    </div>
+                </div>
+
+                <!-- Activity 3: Write the Plurals -->
+                <div class="instruction-box">
+                    <h4><i class="fa-solid fa-list-ol"></i> Activity 3: Write the Plurals</h4>
+                    <ol>
+                        <li>Look at the singular noun. Type the correct plural form in the box.</li>
+                    </ol>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">1. Phone</span> ➔
+                        <input type="text" id="pl-1" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">2. Class</span> ➔
+                        <input type="text" id="pl-2" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">3. Country</span> ➔
+                        <input type="text" id="pl-3" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">4. Teacher</span> ➔
+                        <input type="text" id="pl-4" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">5. Box</span> ➔
+                        <input type="text" id="pl-5" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">6. Person</span> ➔
+                        <input type="text" id="pl-6" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">7. Child</span> ➔
+                        <input type="text" id="pl-7" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">8. Watch</span> ➔
+                        <input type="text" id="pl-8" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">9. Man</span> ➔
+                        <input type="text" id="pl-9" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 p-2 rounded-xl border border-slate-100">
+                        <span class="font-bold text-slate-600 w-24 text-sm">10. Party</span> ➔
+                        <input type="text" id="pl-10" class="border-b-2 border-slate-300 flex-grow bg-transparent px-2 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-sm transition" placeholder="...">
+                    </div>
+                </div>
+                <div class="mt-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p id="plural-feedback" class="font-bold text-sm h-5"></p>
+                    <button onclick="checkInputs([{id:'pl-1', a:'phones'}, {id:'pl-2', a:'classes'}, {id:'pl-3', a:'countries'}, {id:'pl-4', a:'teachers'}, {id:'pl-5', a:'boxes'}, {id:'pl-6', a:'people'}, {id:'pl-7', a:'children'}, {id:'pl-8', a:'watches'}, {id:'pl-9', a:'men'}, {id:'pl-10', a:'parties'}], 'plural-feedback')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check 10 Plurals</button>
+                </div>
+            </div>
+
+            <!-- New Activity: Contextual Dropdowns -->
+            <div class="instruction-box mt-8">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 4: Choose the Correct Noun</h4>
+                <ol>
+                    <li>Read the sentence carefully. Pay attention to numbers (one, two) and articles (a, an).</li>
+                    <li>Select the correct noun form from the dropdown.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">1.</span> I need an 
+                        <select id="nc-1" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="correct">apple</option><option value="wrong">apples</option></select>
+                        for lunch.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">2.</span> There are three 
+                        <select id="nc-2" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">person</option><option value="correct">people</option></select>
+                        in the car.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">3.</span> She is a beautiful 
+                        <select id="nc-3" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="correct">woman</option><option value="wrong">women</option></select>.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">4.</span> Diego has two 
+                        <select id="nc-4" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">watch</option><option value="correct">watches</option></select>.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">5.</span> I see five 
+                        <select id="nc-5" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">child</option><option value="correct">children</option></select>
+                        playing.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">6.</span> Do you have a 
+                        <select id="nc-6" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">phones</option><option value="correct">phone</option></select>?
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">7.</span> They are 
+                        <select id="nc-7" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">student</option><option value="correct">students</option></select>.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">8.</span> I want to visit many 
+                        <select id="nc-8" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="correct">cities</option><option value="wrong">citys</option></select>.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">9.</span> It is an interesting 
+                        <select id="nc-9" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="wrong">books</option><option value="correct">book</option></select>.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">10.</span> There are two 
+                        <select id="nc-10" class="border border-slate-300 rounded p-1 text-sm font-bold text-emerald-700 outline-none"><option value="">---</option><option value="correct">men</option><option value="wrong">mans</option></select>
+                        in the office.
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button onclick="checkDropdowns(['nc-1', 'nc-2', 'nc-3', 'nc-4', 'nc-5', 'nc-6', 'nc-7', 'nc-8', 'nc-9', 'nc-10'], 'nc-feedback')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check Answers</button>
+                    <p id="nc-feedback" class="mt-2 font-bold h-5 text-sm"></p>
+                </div>
+            </div>
+
+            <!-- Activity 5: Story Fill-in-the-blanks -->
+            <div class="instruction-box mt-8">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 5: The Supermarket Story</h4>
+                <ol>
+                    <li>Read the short story below.</li>
+                    <li>Look at the word in parentheses `()`. Type the correct <strong>plural noun</strong> OR correct <strong>article (A/An)</strong> in the blank.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 font-nunito text-slate-700 leading-relaxed text-lg shadow-inner mb-6">
+                    "Every Saturday, I go to the supermarket. First, I need 
+                    <input type="text" id="story-1" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(Article)</span> apple and two 
+                    <input type="text" id="story-2" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(tomato)</span> for my salad. Next, I buy three 
+                    <input type="text" id="story-3" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(box)</span> of cereal for breakfast. Near the fruits, I see two 
+                    <input type="text" id="story-4" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(woman)</span> and three 
+                    <input type="text" id="story-5" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(man)</span> talking. They have four 
+                    <input type="text" id="story-6" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(child)</span> with them! Before leaving, I grab 
+                    <input type="text" id="story-7" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(Article)</span> bottle of water, two 
+                    <input type="text" id="story-8" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(candy)</span>, and five 
+                    <input type="text" id="story-9" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="...">
+                    <span class="text-sm text-slate-400">(potato)</span>. I also see 
+                    <input type="text" id="story-10" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="...">
+                    <span class="text-sm text-slate-400">(Article)</span> elephant on the TV near the exit! Finally, I buy 
+                    <input type="text" id="story-11" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(Article)</span> umbrella because it is raining. The supermarket has many 
+                    <input type="text" id="story-12" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="..."> 
+                    <span class="text-sm text-slate-400">(thing)</span>. I love visiting all the 
+                    <input type="text" id="story-13" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="...">
+                    <span class="text-sm text-slate-400">(city)</span> in the world. I always carry two 
+                    <input type="text" id="story-14" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="...">
+                    <span class="text-sm text-slate-400">(watch)</span> and take many 
+                    <input type="text" id="story-15" class="border-b-2 border-slate-400 bg-transparent px-2 w-24 outline-none font-bold text-emerald-600 focus:border-emerald-500 text-base text-center" placeholder="...">
+                    <span class="text-sm text-slate-400">(bus)</span>!"
+                </div>
+                <div class="mt-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p id="story-feedback" class="font-bold text-sm h-5"></p>
+                    <button onclick="checkInputs([{id:'story-1', a:'an'}, {id:'story-2', a:'tomatoes'}, {id:'story-3', a:'boxes'}, {id:'story-4', a:'women'}, {id:'story-5', a:'men'}, {id:'story-6', a:'children'}, {id:'story-7', a:'a'}, {id:'story-8', a:'candies'}, {id:'story-9', a:'potatoes'}, {id:'story-10', a:'an'}, {id:'story-11', a:'an'}, {id:'story-12', a:'things'}, {id:'story-13', a:'cities'}, {id:'story-14', a:'watches'}, {id:'story-15', a:'buses'}], 'story-feedback')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check Story</button>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                 <button onclick="switchTab('tab-tobe')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Verb To Be Mastery 🅰️ <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: VERB TO BE                          -->
+        <!-- ========================================== -->
+        <section id="tab-tobe" class="tab-content no-print">
+            <div class="transition-box border-l-purple-500 bg-purple-50">
+                <h4 class="text-purple-800"><i class="fa-solid fa-layer-group"></i> The Verb To Be</h4>
+                <p>The verb <strong>To Be</strong> (am, is, are) is the engine of English. We use it to describe people and things. Let's master the Affirmative and Negative forms in complex sentences.</p>
+            </div>
+
+            <!-- Theory Cards -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Subject Pronouns & Nouns</h3>
+                <p class="text-sm text-slate-600 mb-4">In English, sentences need a Subject. You can use a <strong>Name/Noun</strong> (Maria, The dog) OR a <strong>Pronoun</strong> (She, It). Pronouns replace nouns so we don't repeat them!</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm mb-8">
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center"><span class="font-black text-purple-700 block text-lg mb-1">He</span><span class="text-slate-600">1 Man / Boy<br>(e.g., Tom, My brother)</span></div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center"><span class="font-black text-purple-700 block text-lg mb-1">She</span><span class="text-slate-600">1 Woman / Girl<br>(e.g., Maria, My sister)</span></div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center"><span class="font-black text-purple-700 block text-lg mb-1">It</span><span class="text-slate-600">1 Thing / Animal<br>(e.g., The car, The dog)</span></div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center"><span class="font-black text-purple-700 block text-lg mb-1">They</span><span class="text-slate-600">2+ People/Things<br>(e.g., Tom & Maria, Dogs)</span></div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center md:col-span-2"><span class="font-black text-purple-700 block text-lg mb-1">We</span><span class="text-slate-600">Another person + I<br>(e.g., Tom and I)</span></div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100 text-center md:col-span-2"><span class="font-black text-purple-700 block text-lg mb-1">You</span><span class="text-slate-600">The person I am talking to<br>(Tú / Ustedes)</span></div>
+                </div>
+
+                <!-- Activity: Match Noun to Pronoun -->
+                <div class="instruction-box">
+                    <h4><i class="fa-solid fa-link"></i> Activity 6: Match the Noun to the Pronoun</h4>
+                    <ol>
+                        <li>Look at the Noun subject.</li>
+                        <li>Choose the correct Pronoun that can replace it.</li>
+                    </ol>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">1. My mother</span>
+                        <select id="pro-1" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">He</option><option value="correct">She</option><option value="wrong">It</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">2. My father</span>
+                        <select id="pro-2" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">He</option><option value="wrong">She</option><option value="wrong">They</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">3. Diego and I</span>
+                        <select id="pro-3" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">They</option><option value="correct">We</option><option value="wrong">You</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">4. The dogs</span>
+                        <select id="pro-4" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">It</option><option value="wrong">We</option><option value="correct">They</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">5. The computer</span>
+                        <select id="pro-5" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">It</option><option value="wrong">He</option><option value="wrong">They</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">6. My friends</span>
+                        <select id="pro-6" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">We</option><option value="wrong">He</option><option value="correct">They</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">7. Sarah</span>
+                        <select id="pro-7" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">He</option><option value="correct">She</option><option value="wrong">It</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">8. Mr. Smith</span>
+                        <select id="pro-8" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">He</option><option value="wrong">She</option><option value="wrong">They</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">9. The students</span>
+                        <select id="pro-9" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">They</option><option value="wrong">We</option><option value="wrong">It</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">10. The company</span>
+                        <select id="pro-10" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">She</option><option value="wrong">They</option><option value="correct">It</option></select>
+                    </div>
+                    <!-- Added 5 more items to reach 15 -->
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">11. David and I</span>
+                        <select id="pro-11" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">They</option><option value="correct">We</option><option value="wrong">You</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">12. The computers</span>
+                        <select id="pro-12" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">They</option><option value="wrong">It</option><option value="wrong">We</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">13. My sister</span>
+                        <select id="pro-13" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">He</option><option value="correct">She</option><option value="wrong">It</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">14. The cat</span>
+                        <select id="pro-14" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">They</option><option value="wrong">He</option><option value="correct">It</option></select>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="font-bold text-slate-700">15. The doctors</span>
+                        <select id="pro-15" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">They</option><option value="wrong">He</option><option value="wrong">We</option></select>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <button onclick="checkDropdowns(['pro-1', 'pro-2', 'pro-3', 'pro-4', 'pro-5', 'pro-6', 'pro-7', 'pro-8', 'pro-9', 'pro-10', 'pro-11', 'pro-12', 'pro-13', 'pro-14', 'pro-15'], 'pro-feedback')" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check 15 Pronouns</button>
+                    <p id="pro-feedback" class="mt-2 font-bold h-5 text-sm"></p>
+                </div>
+            </div>
+
+            <!-- Conjugation Table -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8 overflow-x-auto">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Conjugation & Contractions</h3>
+                    <table class="w-full text-center border-collapse">
+                        <thead>
+                            <tr class="bg-purple-100 border-b-2 border-purple-200 text-purple-800 text-sm uppercase tracking-wider">
+                                <th class="p-3 font-bold">Pronoun</th>
+                                <th class="p-3 font-bold">Affirmative (+)</th>
+                                <th class="p-3 font-bold text-slate-600">Negative (-)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-800 text-sm font-medium">
+                            <tr><td class="p-3">I</td><td class="p-3"><strong class="text-purple-600">am</strong> / 'm</td><td class="p-3 text-slate-600">am not / 'm not</td></tr>
+                            <tr class="bg-slate-50/50"><td class="p-3">You, We, They</td><td class="p-3"><strong class="text-purple-600">are</strong> / 're</td><td class="p-3 text-slate-600">are not / aren't</td></tr>
+                            <tr><td class="p-3">He, She, It</td><td class="p-3"><strong class="text-purple-600">is</strong> / 's</td><td class="p-3 text-slate-600">is not / isn't</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-3 bg-red-50 p-2 rounded border border-red-200 text-xs font-bold text-red-700 text-center">⚠️ Remember: In English, we DO NOT "have" years. We "are" years old!</div>
+                </div>
+
+            <!-- Activity 7: Dropdowns -->
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 7: Choose the correct Verb</h4>
+                <ol>
+                    <li>Read the sentence carefully. Look at the Subject (Pronoun or Noun).</li>
+                    <li>Select the correct form of the verb "To Be" from the dropdown.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">1.</span> My parents 
+                        <select id="tb-1" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="wrong">is</option><option value="correct">are</option></select>
+                        from Canada.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">2.</span> The dog 
+                        <select id="tb-2" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="correct">is</option><option value="wrong">are</option></select>
+                        very happy today.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">3.</span> Diego and I 
+                        <select id="tb-3" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="wrong">is</option><option value="correct">are</option></select>
+                        teachers.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">4.</span> This book 
+                        <select id="tb-4" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="correct">is</option><option value="wrong">are</option></select>
+                        interesting.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">5.</span> The students 
+                        <select id="tb-5" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="wrong">is</option><option value="correct">are</option></select>
+                        not in the classroom.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">6.</span> You 
+                        <select id="tb-6" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="wrong">is</option><option value="correct">are</option></select>
+                        a great chef.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">7.</span> My computer 
+                        <select id="tb-7" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="correct">is</option><option value="wrong">are</option></select>
+                        not working.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">8.</span> I 
+                        <select id="tb-8" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="correct">am</option><option value="wrong">is</option><option value="wrong">are</option></select>
+                        an artist.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">9.</span> London and Paris 
+                        <select id="tb-9" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="wrong">is</option><option value="correct">are</option></select>
+                        beautiful cities.
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="font-bold text-slate-600 w-6">10.</span> She 
+                        <select id="tb-10" class="border border-slate-300 rounded p-1 text-sm font-bold text-purple-700 outline-none"><option value="">---</option><option value="wrong">am</option><option value="correct">is</option><option value="wrong">are</option></select>
+                        twenty years old.
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button onclick="checkDropdowns(['tb-1', 'tb-2', 'tb-3', 'tb-4', 'tb-5', 'tb-6', 'tb-7', 'tb-8', 'tb-9', 'tb-10'], 'tbd-feedback')" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check 10 Answers</button>
+                    <p id="tbd-feedback" class="mt-2 font-bold h-5 text-sm"></p>
+                </div>
+            </div>
+
+            <!-- Activity 8: True/False Reading -->
+            <div class="instruction-box mt-8">
+                <h4><i class="fa-solid fa-book-open"></i> Activity 8: Read and Choose True or False</h4>
+                <ol>
+                    <li>Read the text about the Taylor family.</li>
+                    <li>Answer the True/False questions.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 font-nunito text-slate-700 leading-relaxed text-lg shadow-inner mb-6">
+                    "This is the Taylor family. John is the father. He is an engineer and he is 45 years old. Mary is the mother. She is a teacher and she is very kind. They are from New York, USA. They are not in New York right now; they are in Paris for a vacation. Paris is a beautiful city, but it is cold today. The children, Tommy and Lucy, are very happy."
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="tf-reading-container">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="tf-1">
+                        <p class="font-medium text-slate-800 mb-3 text-sm">1. John is 45 years old.</p>
+                        <div class="flex gap-2">
+                            <button onclick="checkMCQ('tf-1', 0, 0)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">True</button>
+                            <button onclick="checkMCQ('tf-1', 1, 0)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">False</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="tf-2">
+                        <p class="font-medium text-slate-800 mb-3 text-sm">2. Mary is an engineer.</p>
+                        <div class="flex gap-2">
+                            <button onclick="checkMCQ('tf-2', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">True</button>
+                            <button onclick="checkMCQ('tf-2', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">False</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="tf-3">
+                        <p class="font-medium text-slate-800 mb-3 text-sm">3. The family is in New York today.</p>
+                        <div class="flex gap-2">
+                            <button onclick="checkMCQ('tf-3', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">True</button>
+                            <button onclick="checkMCQ('tf-3', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">False</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="tf-4">
+                        <p class="font-medium text-slate-800 mb-3 text-sm">4. Paris is hot today.</p>
+                        <div class="flex gap-2">
+                            <button onclick="checkMCQ('tf-4', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">True</button>
+                            <button onclick="checkMCQ('tf-4', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">False</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="tf-5">
+                        <p class="font-medium text-slate-800 mb-3 text-sm">5. Tommy and Lucy are sad.</p>
+                        <div class="flex gap-2">
+                            <button onclick="checkMCQ('tf-5', 0, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">True</button>
+                            <button onclick="checkMCQ('tf-5', 1, 1)" class="flex-1 bg-white hover:bg-slate-100 transition border border-slate-200 py-1.5 px-3 rounded text-sm text-left">False</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 9: Dialogue Completion -->
+            <div class="instruction-box mt-8">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 9: Workplace Dialogue</h4>
+                <ol>
+                    <li>Read the dialogue between the new manager and her team.</li>
+                    <li>Type the correct form of the verb To Be <strong>(am, is, are, am not, isn't, aren't)</strong> in the blanks. Pay attention to contractions if needed.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 font-nunito text-slate-700 leading-relaxed text-lg shadow-inner mb-6">
+                    <p class="mb-4"><strong class="text-blue-700">Sarah:</strong> Hello! My name 
+                        <input type="text" id="dlg-1" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> Sarah. I 
+                        <input type="text" id="dlg-2" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> the new manager.
+                    </p>
+                    <p class="mb-4"><strong class="text-emerald-700">Tom:</strong> Hi Sarah! We 
+                        <input type="text" id="dlg-3" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> very happy to meet you. These 
+                        <input type="text" id="dlg-4" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> my colleagues, Rita and John. They 
+                        <input type="text" id="dlg-5" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> engineers.
+                    </p>
+                    <p class="mb-4"><strong class="text-blue-700">Sarah:</strong> Nice to meet you both. 
+                        <input type="text" id="dlg-6" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> John from the USA?
+                    </p>
+                    <p class="mb-4"><strong class="text-emerald-700">Tom:</strong> No, he 
+                        <input type="text" id="dlg-7" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> (Negative). He 
+                        <input type="text" id="dlg-8" class="border-b-2 border-slate-400 bg-transparent px-2 w-16 outline-none font-bold text-purple-600 focus:border-purple-500 text-base text-center" placeholder="..."> from Canada. But Rita and I are from New York.
+                    </p>
+                </div>
+                <div class="mt-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p id="dlg-feedback" class="font-bold text-sm h-5"></p>
+                    <button onclick="checkInputs([{id:'dlg-1', a:'is'}, {id:'dlg-2', a:'am'}, {id:'dlg-3', a:'are'}, {id:'dlg-4', a:'are'}, {id:'dlg-5', a:'are'}, {id:'dlg-6', a:'is'}, {id:'dlg-7', a:'isn\'t'}, {id:'dlg-8', a:'is'}], 'dlg-feedback')" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-8 rounded-full transition shadow-sm text-sm">Check Dialogue</button>
+                </div>
+            </div>
+            
+            <!-- Activity 10: Find the Mistake (MCQ) -->
+            <div class="instruction-box mt-8">
+                <h4><i class="fa-solid fa-book-open"></i> Activity 10: Find the Correct Sentence</h4>
+                <ol>
+                    <li>Read the three sentences in each block. Two of them have bad grammar!</li>
+                    <li>Click the <strong>only</strong> sentence that is 100% correct.</li>
+                </ol>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="act8-mcq-container">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-1">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">1. Age</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-1', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) She have 25 years old.</button>
+                        <button onclick="checkMCQ('err-mcq-1', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) She is 25 years old.</button>
+                        <button onclick="checkMCQ('err-mcq-1', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) She has 25 years.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-2">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">2. Profession</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-2', 0, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) I am teacher.</button>
+                        <button onclick="checkMCQ('err-mcq-2', 1, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) I are a teacher.</button>
+                        <button onclick="checkMCQ('err-mcq-2', 2, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) I am a teacher.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-3">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">3. Plural Noun subject</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-3', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) The dogs is big.</button>
+                        <button onclick="checkMCQ('err-mcq-3', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) The dogs are big.</button>
+                        <button onclick="checkMCQ('err-mcq-3', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) The dogs am big.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-4">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">4. Negative contraction</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-4', 0, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) We aren't from Brazil.</button>
+                        <button onclick="checkMCQ('err-mcq-4', 1, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) We amn't from Brazil.</button>
+                        <button onclick="checkMCQ('err-mcq-4', 2, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) We isn't from Brazil.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-5">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">5. Pronoun matching</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-5', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) Tom and Maria is doctors.</button>
+                        <button onclick="checkMCQ('err-mcq-5', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) Tom and Maria are doctors.</button>
+                        <button onclick="checkMCQ('err-mcq-5', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) Tom and Maria am doctors.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-6">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">6. Object matching</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-6', 0, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) The phone are broken.</button>
+                        <button onclick="checkMCQ('err-mcq-6', 1, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) The phone am broken.</button>
+                        <button onclick="checkMCQ('err-mcq-6', 2, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) The phone is broken.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-7">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">7. Plural Articles</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-7', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) They are a students.</button>
+                        <button onclick="checkMCQ('err-mcq-7', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) They are students.</button>
+                        <button onclick="checkMCQ('err-mcq-7', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) They are an students.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-8">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">8. Negative form</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-8', 0, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) He is not my brother.</button>
+                        <button onclick="checkMCQ('err-mcq-8', 1, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) He not is my brother.</button>
+                        <button onclick="checkMCQ('err-mcq-8', 2, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) He don't be my brother.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-9">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">9. Article 'an'</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-9', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) It is a apple.</button>
+                        <button onclick="checkMCQ('err-mcq-9', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) It is an apple.</button>
+                        <button onclick="checkMCQ('err-mcq-9', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) It are an apple.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-10">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">10. We pronoun</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-10', 0, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) Diego and I am happy.</button>
+                        <button onclick="checkMCQ('err-mcq-10', 1, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) Diego and I is happy.</button>
+                        <button onclick="checkMCQ('err-mcq-10', 2, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) Diego and I are happy.</button>
+                    </div>
+                </div>
+                <!-- 11 to 15 -->
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-11">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">11. Negative "I"</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-11', 0, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) I am not from Spain.</button>
+                        <button onclick="checkMCQ('err-mcq-11', 1, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) I amn't from Spain.</button>
+                        <button onclick="checkMCQ('err-mcq-11', 2, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) I aren't from Spain.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-12">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">12. Irregular Plural</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-12', 0, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) The childs are playing.</button>
+                        <button onclick="checkMCQ('err-mcq-12', 1, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) The childrens are playing.</button>
+                        <button onclick="checkMCQ('err-mcq-12', 2, 2)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) The children are playing.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-13">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">13. Article 'a'</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-13', 0, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) It is an book.</button>
+                        <button onclick="checkMCQ('err-mcq-13', 1, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) It is a book.</button>
+                        <button onclick="checkMCQ('err-mcq-13', 2, 1)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) They are a book.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm" id="err-mcq-14">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">14. City Origin</p>
+                    <div class="flex flex-col gap-2">
+                        <button onclick="checkMCQ('err-mcq-14', 0, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) We are from London.</button>
+                        <button onclick="checkMCQ('err-mcq-14', 1, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) We are London.</button>
+                        <button onclick="checkMCQ('err-mcq-14', 2, 0)" class="text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) We from London.</button>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 shadow-sm md:col-span-2" id="err-mcq-15">
+                    <p class="font-bold text-purple-800 mb-3 text-sm">15. "It" Pronoun</p>
+                    <div class="flex flex-col md:flex-row gap-2">
+                        <button onclick="checkMCQ('err-mcq-15', 0, 1)" class="flex-1 text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">A) The cat are sleeping.</button>
+                        <button onclick="checkMCQ('err-mcq-15', 1, 1)" class="flex-1 text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">B) The cat is sleeping.</button>
+                        <button onclick="checkMCQ('err-mcq-15', 2, 1)" class="flex-1 text-left bg-white hover:bg-slate-100 transition border border-slate-200 py-2 px-3 rounded text-sm font-medium">C) The cats is sleeping.</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 11: Unscramble -->
+            <div class="instruction-box">
+                <h4><i class="fa-solid fa-list-ol"></i> Activity 11: Grammar Unscramble</h4>
+                <ol>
+                    <li>Click the words in the correct order to build 10 perfect sentences.</li>
+                    <li>Pay attention to affirmative vs. negative structures!</li>
+                </ol>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10" id="unscramble-tobe-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="text-center">
+                 <button onclick="switchTab('tab-mission')" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-full font-bold transition shadow-lg transform hover:-translate-y-1">Next: Writing Workshop ✍️ <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: FINAL MISSION / WRITING LAB         -->
+        <!-- ========================================== -->
+        <section id="tab-mission" class="tab-content">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden mb-10 no-print">
+                <div class="absolute -right-10 -bottom-10 text-9xl opacity-5 pointer-events-none">✍️</div>
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#6366f1 2px, transparent 2px); background-size: 30px 30px;"></div>
+                
+                <div class="text-center relative z-10 mb-10">
+                    <span class="bg-emerald-500 text-slate-900 text-xs font-black px-4 py-2 rounded-full uppercase tracking-wider shadow-sm">Productive Task</span>
+                    <h2 class="text-3xl md:text-5xl font-poppins font-black mt-4 mb-4">The Writing Workshop</h2>
+                    <p class="text-slate-300 max-w-2xl mx-auto text-lg">Let's put everything together. You are going to write a professional "About Me" paragraph for a company directory or class forum. Follow the guided steps below to build your sentences.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10 items-stretch">
+                    
+                    <!-- Step 1: The Blueprint (Sentence Builder) -->
+                    <div class="bg-slate-800/80 p-6 md:p-8 rounded-2xl backdrop-blur-sm border border-slate-600 shadow-xl w-full flex flex-col">
+                        <h3 class="text-xl font-bold text-amber-400 mb-2 flex items-center gap-2 border-b border-slate-600 pb-2"><i class="fa-solid fa-hammer"></i> Step 1: Sentence Builder</h3>
+                        <p class="text-sm text-slate-300 mb-6">Type complete sentences using the Verb To Be for each prompt.</p>
+
+                        <div class="space-y-5 flex-grow">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1 font-bold">1. Introduce your name</label>
+                                <div class="text-[10px] text-emerald-400 mb-1">Tip: Use "My name is..." or "I am..."</div>
+                                <input type="text" id="draft-1" oninput="updateWritingLab()" class="w-full bg-slate-900 border border-slate-500 rounded p-2 text-white outline-none focus:border-indigo-400 text-sm" placeholder="...">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1 font-bold">2. State your age</label>
+                                <div class="text-[10px] text-emerald-400 mb-1">Tip: "I am [number] years old."</div>
+                                <input type="text" id="draft-2" oninput="updateWritingLab()" class="w-full bg-slate-900 border border-slate-500 rounded p-2 text-white outline-none focus:border-indigo-400 text-sm" placeholder="...">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1 font-bold">3. State your location or origin</label>
+                                <div class="text-[10px] text-emerald-400 mb-1">Tip: "I am from..." or "I am in..."</div>
+                                <input type="text" id="draft-3" oninput="updateWritingLab()" class="w-full bg-slate-900 border border-slate-500 rounded p-2 text-white outline-none focus:border-indigo-400 text-sm" placeholder="...">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1 font-bold">4. State your profession</label>
+                                <div class="text-[10px] text-emerald-400 mb-1">Tip: "I am a/an..."</div>
+                                <input type="text" id="draft-4" oninput="updateWritingLab()" class="w-full bg-slate-900 border border-slate-500 rounded p-2 text-white outline-none focus:border-indigo-400 text-sm" placeholder="...">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1 font-bold">5. Describe your personality</label>
+                                <div class="text-[10px] text-emerald-400 mb-1">Tip: "I am friendly and happy."</div>
+                                <input type="text" id="draft-5" oninput="updateWritingLab()" class="w-full bg-slate-900 border border-slate-500 rounded p-2 text-white outline-none focus:border-indigo-400 text-sm" placeholder="...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Live Preview & Final Polish -->
+                    <div class="flex flex-col h-full w-full">
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2 border-b border-slate-700 pb-2"><i class="fa-solid fa-pen-nib"></i> Step 2: Final Paragraph</h3>
+                        <p class="text-sm text-slate-300 mb-6">As you build your sentences, your paragraph is generated below. Read it, fix any errors, and add a greeting!</p>
+                        
+                        <div class="bg-slate-100 rounded-2xl p-6 shadow-inner relative flex-grow flex flex-col border-2 border-slate-300">
+                            <div class="flex justify-between items-center mb-4 border-b border-slate-300 pb-3">
+                                <div class="flex items-center gap-2 text-slate-800">
+                                    <i class="fa-solid fa-id-card text-emerald-600 text-xl"></i>
+                                    <span class="font-black font-poppins uppercase tracking-widest text-sm">About Me</span>
+                                </div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase bg-slate-200 px-2 py-1 rounded">Draft Mode</span>
+                            </div>
+                            
+                            <textarea id="final-paragraph" class="w-full flex-grow bg-transparent border-none outline-none resize-none text-slate-700 font-serif text-lg leading-relaxed min-h-[250px]" placeholder="Your paragraph will appear here..."></textarea>
+                            
+                            <button onclick="copyParagraph()" class="w-full mt-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl transition shadow-lg transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
+                                <i class="fa-solid fa-copy"></i> COPY TO CLIPBOARD
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peer Review Task -->
+                <div class="mt-12 bg-emerald-900/50 p-6 md:p-8 rounded-2xl border border-emerald-500/30 relative z-10 text-center">
+                    <h3 class="text-2xl font-bold text-emerald-400 mb-4 flex items-center justify-center gap-3"><i class="fa-solid fa-comments"></i> Step 3: Peer Review</h3>
+                    <p class="text-slate-300 mb-4 max-w-2xl mx-auto">Move to your breakout rooms! Read your final paragraph to your partner. Partners: Listen carefully and check if they used "A/An" correctly before their profession, and if they used the Verb To Be correctly.</p>
+                </div>
+
+            </div>
+            
+            <div class="text-center pt-6 pb-10 no-print">
+                <p class="text-slate-500 font-medium text-lg">Amazing work today! You wrote your first complete paragraph. See you next time! 👋</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast" class="toast no-print"></div>
+
+    <script>
+        // Global State
+        let answeredQuestions = new Set(); 
+
+        // UI Functions
+        function switchTab(tabId) {
+            try {
+                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+                const tabs = ['tab-agenda', 'tab-nouns', 'tab-tobe', 'tab-mission'];
+                
+                tabs.forEach(id => {
+                    const btn = document.getElementById(`btn-${id}`);
+                    if (btn) btn.className = "px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-slate-500 hover:bg-slate-100 whitespace-nowrap";
+                });
+                
+                const target = document.getElementById(tabId);
+                if (target) target.classList.add('active');
+                
+                const activeBtn = document.getElementById(`btn-${tabId}`);
+                if (activeBtn) activeBtn.className = "px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-slate-800 text-white shadow-md whitespace-nowrap";
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } catch (e) { console.error('switchTab error:', e); }
+        }
+
+        function showToast(msg, type = 'success') {
+            try {
+                const toast = document.getElementById('toast');
+                toast.textContent = msg;
+                toast.className = `toast toast-${type} show`;
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            } catch (e) { console.error(e); }
+        }
+
+        // ==========================================
+        // TEXT-TO-SPEECH
+        // ==========================================
+        function speakText(text, rate = 0.9) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                setTimeout(() => {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'en-US';
+                    utterance.rate = rate; 
+                    window.speechSynthesis.speak(utterance);
+                }, 50);
+            } else {
+                showToast("Audio not supported in this browser.", "error");
+            }
+        }
+
+        // ==========================================
+        // ACTIVITY: DATE & PRICE TRIVIA WARMUP
+        // ==========================================
+        const dateTriviaData = [
+            { q: "How do you say '12/25'?", options: ["December 25th", "December 20th", "November 25th"], correct: 0 },
+            { q: "How do you say '$45'?", options: ["Four-five dollars", "Forty-five dollars", "Fifteen dollars"], correct: 1 },
+            { q: "If today is Monday, tomorrow is...", options: ["Sunday", "Wednesday", "Tuesday"], correct: 2 },
+            { q: "How do you say '01/01'?", options: ["January 1st", "January 2nd", "June 1st"], correct: 0 },
+            { q: "How do you say '$120'?", options: ["One twenty dollars", "One hundred and twenty dollars", "Twelve zero dollars"], correct: 1 }
+        ];
+        let currentDateTriviaIndex = 0;
+
+        function startDateTrivia() {
+            currentDateTriviaIndex = 0;
+            renderDateTrivia();
+        }
+
+        function renderDateTrivia() {
+            if (currentDateTriviaIndex >= dateTriviaData.length) {
+                document.getElementById('date-trivia-question').innerHTML = "<span class='text-emerald-400 text-4xl'>🎉 Perfect! Brain activated.</span>";
+                document.getElementById('date-trivia-options').innerHTML = `<button onclick="startDateTrivia()" class="md:col-span-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xl px-12 py-4 rounded-full shadow-md transform hover:scale-105 transition-all">PLAY AGAIN 🔄</button>`;
+                document.getElementById('date-trivia-progress').textContent = "Complete!";
+                return;
+            }
+
+            const q = dateTriviaData[currentDateTriviaIndex];
+            document.getElementById('date-trivia-question').textContent = q.q;
+            document.getElementById('date-trivia-progress').textContent = `Question ${currentDateTriviaIndex + 1} / ${dateTriviaData.length}`;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                optionsHtml += `<button onclick="checkDateTrivia(${idx}, ${q.correct})" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-4 px-6 rounded-xl border-2 border-slate-600 hover:border-blue-400 transition text-lg w-full">${opt}</button>`;
+            });
+            document.getElementById('date-trivia-options').innerHTML = optionsHtml;
+        }
+
+        function checkDateTrivia(guess, correct) {
+            const optionsBox = document.getElementById('date-trivia-options');
+            const buttons = optionsBox.querySelectorAll('button');
+            
+            if (guess === correct) {
+                buttons[guess].classList.replace('bg-slate-700', 'bg-green-600');
+                buttons[guess].classList.replace('border-slate-600', 'border-green-500');
+                showToast("✅ Correct!", "success");
+                setTimeout(() => {
+                    currentDateTriviaIndex++;
+                    renderDateTrivia();
+                }, 800);
+            } else {
+                buttons[guess].classList.replace('bg-slate-700', 'bg-red-600');
+                buttons[guess].classList.replace('border-slate-600', 'border-red-500');
+                showToast("❌ Try again!", "error");
+                setTimeout(() => {
+                    buttons[guess].classList.replace('bg-red-600', 'bg-slate-700');
+                    buttons[guess].classList.replace('border-red-500', 'border-slate-600');
+                }, 800);
+            }
+        }
+
+        // ==========================================
+        // MULTIPLE CHOICE / DROPDOWNS / INPUTS
+        // ==========================================
+        function checkMCQ(containerId, guessIndex, correctIndex) {
+            if (answeredQuestions.has(containerId)) return;
+            const container = document.getElementById(containerId);
+            const buttons = container.querySelectorAll('button');
+            
+            if (guessIndex === correctIndex) {
+                buttons[guessIndex].classList.add('correct-highlight');
+                showToast('✅ Correct!', 'success');
+                answeredQuestions.add(containerId);
+            } else {
+                buttons[guessIndex].classList.add('wrong-highlight');
+                showToast('❌ Not quite. Try again.', 'error');
+                setTimeout(() => { buttons[guessIndex].classList.remove('wrong-highlight'); }, 1000);
+            }
+        }
+
+        function checkDropdowns(idsArray, sectionId) {
+            let allCorrect = true;
+            idsArray.forEach(id => {
+                const select = document.getElementById(id);
+                if (!select) return;
+                
+                if (select.value === 'correct') {
+                    select.classList.remove('border-slate-300', 'border-red-400');
+                    select.classList.add('border-green-400', 'bg-green-50', 'text-green-700');
+                } else {
+                    allCorrect = false;
+                    if (select.value !== "") {
+                        select.classList.remove('border-slate-300');
+                        select.classList.add('border-red-400', 'bg-red-50', 'text-red-700');
+                    }
+                }
+            });
+
+            const feedback = document.getElementById(sectionId);
+            if (allCorrect) {
+                if (feedback) { feedback.textContent = "✅ All 10 correct!"; feedback.className = "mt-3 font-bold h-5 text-sm text-green-600"; }
+                showToast("✅ Well done!", "success");
+            } else {
+                if (feedback) { feedback.textContent = "❌ Some answers are incorrect. Try again!"; feedback.className = "mt-3 font-bold h-5 text-sm text-red-500"; }
+                showToast("❌ Check your answers.", "error");
+            }
+        }
+
+        function checkInputs(inputsArray, feedbackId) {
+            let allCorrect = true;
+            inputsArray.forEach(item => {
+                const input = document.getElementById(item.id);
+                if (!input) return;
+                // Allow variations by removing spaces and handling common quotes
+                const val = input.value.trim().toLowerCase().replace(/\s/g, '').replace(/’/g, "'"); 
+                const target = item.a.toLowerCase().replace(/\s/g, '').replace(/’/g, "'");
+                
+                if (val === target) {
+                    input.classList.remove('border-slate-300', 'border-slate-400', 'border-red-400', 'text-emerald-600', 'text-purple-600');
+                    input.classList.add('border-green-500', 'text-green-700', 'bg-green-50');
+                } else {
+                    allCorrect = false;
+                    if (val !== "") {
+                        input.classList.remove('border-slate-300', 'border-slate-400', 'border-green-500', 'bg-green-50', 'text-emerald-600', 'text-purple-600');
+                        input.classList.add('border-red-400', 'text-red-700', 'bg-red-50');
+                    }
+                }
+            });
+            
+            const feedbackEl = document.getElementById(feedbackId);
+            if (feedbackEl) {
+                if (allCorrect) {
+                    feedbackEl.textContent = "✅ All correct!";
+                    feedbackEl.className = "text-right font-bold text-sm h-5 text-green-600";
+                    showToast("✅ Perfect grammar!", "success");
+                } else {
+                    feedbackEl.textContent = "❌ Check the red boxes.";
+                    feedbackEl.className = "text-right font-bold text-sm h-5 text-red-500";
+                    showToast("❌ Some mistakes.", "error");
+                }
+            }
+        }
+
+        // ==========================================
+        // ACTIVITY: A / AN TOGGLE
+        // ==========================================
+        const correctArticles = {
+            'btn-art-1': 'a', 'btn-art-2': 'an', 'btn-art-3': 'a', 'btn-art-4': 'an', 'btn-art-5': 'a',
+            'btn-art-6': 'an', 'btn-art-7': 'a', 'btn-art-8': 'an', 'btn-art-9': 'a', 'btn-art-10': 'an',
+            'btn-art-11': 'an', 'btn-art-12': 'a', 'btn-art-13': 'an', 'btn-art-14': 'an', 'btn-art-15': 'a'
+        };
+
+        function toggleArticle(id) {
+            const btn = document.getElementById(id);
+            if (btn.getAttribute('data-val') === 'a') {
+                btn.setAttribute('data-val', 'an');
+                btn.textContent = 'An';
+                btn.classList.replace('text-slate-700', 'text-indigo-700');
+            } else {
+                btn.setAttribute('data-val', 'a');
+                btn.textContent = 'A';
+                btn.classList.replace('text-indigo-700', 'text-slate-700');
+            }
+            btn.classList.remove('bg-green-200', 'bg-red-200');
+            btn.classList.add('bg-slate-200');
+        }
+
+        function checkArticles() {
+            let allCorrect = true;
+            for (let id in correctArticles) {
+                const btn = document.getElementById(id);
+                if (btn.getAttribute('data-val') === correctArticles[id]) {
+                    btn.classList.replace('bg-slate-200', 'bg-green-200');
+                    btn.classList.replace('bg-red-200', 'bg-green-200');
+                } else {
+                    btn.classList.replace('bg-slate-200', 'bg-red-200');
+                    btn.classList.replace('bg-green-200', 'bg-red-200');
+                    allCorrect = false;
+                }
+            }
+            
+            const fb = document.getElementById('art-feedback');
+            if (allCorrect) {
+                fb.textContent = "✅ Perfect!";
+                fb.className = "mt-2 font-bold h-5 text-sm text-green-600";
+                showToast("✅ Great job!", "success");
+            } else {
+                fb.textContent = "❌ Check the red boxes.";
+                fb.className = "mt-2 font-bold h-5 text-sm text-red-500";
+            }
+        }
+
+        // ==========================================
+        // ACTIVITY: TO BE UNSCRAMBLE (10 Items)
+        // ==========================================
+        const unscrambleToBeData = [
+            { q: "teacher / am / I / a", a: ["i", "am", "a", "teacher"] },
+            { q: "student / He / not / is / a", a: ["he", "is", "not", "a", "student"] },
+            { q: "are / from / Colombia / We", a: ["we", "are", "from", "colombia"] },
+            { q: "not / They / are / artists", a: ["they", "are", "not", "artists"] },
+            { q: "is / She / years / 25 / old", a: ["she", "is", "25", "years", "old"] },
+            { q: "not / I / am / doctor / a", a: ["i", "am", "not", "a", "doctor"] },
+            { q: "is / phone / my / It", a: ["it", "is", "my", "phone"] },
+            { q: "architects / are / You", a: ["you", "are", "architects"] },
+            { q: "He / my / is / friend", a: ["he", "is", "my", "friend"] },
+            { q: "not / is / It / Monday", a: ["it", "is", "not", "monday"] }
+        ];
+
+        function initToBeUnscramble() {
+            const container = document.getElementById('unscramble-tobe-container');
+            if (!container) return;
+            container.innerHTML = '';
+            unscrambleToBeData.forEach((item, index) => {
+                const words = item.q.split(' / ');
+                const shuffled = [...words].sort(() => Math.random() - 0.5);
+                
+                let wordsHtml = shuffled.map(w => `<button onclick="handleToBeUnscrambleClick(this, '${index}')" class="bg-purple-100 hover:bg-purple-200 text-purple-800 font-bold py-1.5 px-3 rounded text-sm shadow-sm border border-purple-200 transition" data-word="${w.toLowerCase()}">${w}</button>`).join('');
+                
+                const html = `
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-sm" id="utobe-${index}">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Sentence ${index + 1}</span>
+                            <button onclick="resetToBeUnscramble('${index}')" class="text-[10px] text-slate-400 hover:text-slate-600"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-2 min-h-[30px]" id="wb-tobe-${index}">${wordsHtml}</div>
+                        <div class="droppable p-2 min-h-[40px] flex flex-wrap gap-2 items-center w-full bg-white" id="ab-tobe-${index}"></div>
+                        <p id="fb-tobe-${index}" class="text-xs font-bold mt-1 h-4 text-emerald-600"></p>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function handleToBeUnscrambleClick(btn, index) {
+            const answerBox = document.getElementById(`ab-tobe-${index}`);
+            answerBox.appendChild(btn);
+            const allBtns = answerBox.querySelectorAll('button');
+            if (allBtns.length === unscrambleToBeData[index].a.length) {
+                checkToBeUnscramble(index, allBtns);
+            }
+        }
+
+        function resetToBeUnscramble(index) {
+            const answerBox = document.getElementById(`ab-tobe-${index}`);
+            const wordBank = document.getElementById(`wb-tobe-${index}`);
+            const btns = answerBox.querySelectorAll('button');
+            btns.forEach(btn => {
+                btn.disabled = false;
+                btn.classList.remove('cursor-default', 'opacity-80');
+                wordBank.appendChild(btn);
+            });
+            document.getElementById(`fb-tobe-${index}`).textContent = "";
+            answerBox.classList.remove('bg-green-50', 'border-green-400', 'bg-red-50', 'border-red-400');
+            answerBox.classList.add('bg-white', 'border-slate-300');
+        }
+
+        function checkToBeUnscramble(index, btns) {
+            const answerBox = document.getElementById(`ab-tobe-${index}`);
+            const feedback = document.getElementById(`fb-tobe-${index}`);
+            let isCorrect = true;
+            const targetArray = unscrambleToBeData[index].a;
+            
+            btns.forEach((btn, i) => { if (btn.getAttribute('data-word') !== targetArray[i]) isCorrect = false; });
+
+            if (isCorrect) {
+                answerBox.classList.remove('border-slate-300', 'bg-white', 'bg-red-50', 'border-red-400');
+                answerBox.classList.add('border-green-400', 'bg-green-50');
+                feedback.textContent = "✅ Correct!";
+                feedback.className = "text-xs font-bold mt-1 h-4 text-green-600";
+                btns.forEach(b => { b.disabled = true; b.classList.add('cursor-default', 'opacity-80'); });
+            } else {
+                answerBox.classList.remove('border-slate-300', 'bg-white');
+                answerBox.classList.add('border-red-400', 'bg-red-50');
+                feedback.textContent = "❌ Not quite right. Click 'Reset'.";
+                feedback.className = "text-xs font-bold mt-1 h-4 text-red-500";
+            }
+        }
+
+        // ==========================================
+        // MISSION: WRITING LAB BUILDER
+        // ==========================================
+        function updateWritingLab() {
+            try {
+                const draft1 = document.getElementById('draft-1').value.trim();
+                const draft2 = document.getElementById('draft-2').value.trim();
+                const draft3 = document.getElementById('draft-3').value.trim();
+                const draft4 = document.getElementById('draft-4').value.trim();
+                const draft5 = document.getElementById('draft-5').value.trim();
+
+                // Combine sentences intelligently
+                let paragraph = "";
+                
+                if (draft1) paragraph += draft1 + (draft1.endsWith('.') ? " " : ". ");
+                if (draft2) paragraph += draft2 + (draft2.endsWith('.') ? " " : ". ");
+                if (draft3) paragraph += draft3 + (draft3.endsWith('.') ? " " : ". ");
+                if (draft4) paragraph += draft4 + (draft4.endsWith('.') ? " " : ". ");
+                if (draft5) paragraph += draft5 + (draft5.endsWith('.') ? "" : ".");
+
+                document.getElementById('final-paragraph').value = paragraph;
+            } catch (e) {
+                console.error("Error updating writing lab: ", e);
+            }
+        }
+
+        function copyParagraph() {
+            const copyText = document.getElementById("final-paragraph");
+            if(copyText.value.trim() === "") {
+                showToast("Please write your paragraph first!", "error");
+                return;
+            }
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            try {
+                document.execCommand("copy");
+                showToast("📋 Copied to clipboard!", "success");
+            } catch(e) {
+                showToast("❌ Copy failed.", "error");
+            }
+        }
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        window.onload = function() {
+            try { initToBeUnscramble(); } catch (e) { console.error('Unscramble error:', e); }
+            switchTab('tab-agenda');
+        };
+    </script>
+</body>
+</html>
